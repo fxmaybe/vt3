@@ -80,16 +80,22 @@
         </a>
       </li>
     </ul>
+    <el-button>按钮</el-button>
+    <side-bar></side-bar>
   </div>
 </template>
 
 <script>
+import sideBar from "../components/sideBar.vue"
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  components: {
+    sideBar
   }
 }
 </script>
