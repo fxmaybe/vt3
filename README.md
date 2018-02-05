@@ -21,7 +21,7 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 # best of js
-https://bestof.js.org/projects/vuejs/reviews
+``` https://bestof.js.org/projects/vuejs/reviews
 
 # most popular project overall vue
-https://risingstars.js.org/2017/en/
+``` https://risingstars.js.org/2017/en/
