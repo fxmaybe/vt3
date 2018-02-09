@@ -10,7 +10,7 @@
 const delta = 15
 
 export default {
-  name: 'scrollBar',
+  name: 'ScrollBar',
   data() {
     return {
       top: 0
@@ -47,11 +47,12 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: #32435f;
   
 }
 .scroll-wrapper {
   position: absolute;
-   width: 100%!important;
+  width: 100%!important;
+  padding-top: 60px;
 }
 </style>

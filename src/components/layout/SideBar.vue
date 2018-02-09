@@ -1,13 +1,13 @@
 <template>
-  <div class="side-bar">
+  <div >
     <el-menu
       default-active="2"
-      class="el-menu-vertical-demo"
+      class="el-menu-vertical-left"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#333333"
-      text-color="#fff"
-      active-text-color="#ffd04b">
+      background-color="#32435f"
+      text-color="#ffffff"
+      active-text-color="#409efe">
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-location"></i>
@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'sideBar',
+  name: 'SideBar',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -59,5 +59,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .side-bar {width: 201px;}
+  .side-bar {
+    width: 200px;
+  }
+  .side-bar .el-menu-vertical-left {
+    border: none;
+  }
+
+  .side-bar .el-submenu__title i {
+    color: #ffffff;
+  } 
 </style>

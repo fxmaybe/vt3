@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <router-view />
+    <layout />
   </div>
 </template>
 
 <script>
+import Layout from "@/components/Layout.vue";
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Layout
+  }
 }
 </script>
 
@@ -19,14 +23,13 @@ html, body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   height: 100%;
 }
 
 #app .scroll-container {
     -webkit-transition: width 0.28s;
     transition: width 0.28s;
-    width: 200px !important;
+    width: 201px !important;
     height: 100%;
     position: fixed;
     top: 0;
