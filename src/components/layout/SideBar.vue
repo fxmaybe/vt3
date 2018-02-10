@@ -62,6 +62,7 @@ export default {
   .side-bar {
     width: 200px;
   }
+  .el-menu {border: none;}
   .side-bar .el-menu-vertical-left {
     border: none;
   }
