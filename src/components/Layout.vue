@@ -4,7 +4,7 @@
     <scroll-bar>
       <side-bar class="sidebar-container"></side-bar>
     </scroll-bar>
-    <content-area />
+    <main-area />
   </div>
 </template>
 <script>

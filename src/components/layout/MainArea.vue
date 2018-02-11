@@ -11,4 +11,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+	.content {padding-left: 200px;}
 </style>
