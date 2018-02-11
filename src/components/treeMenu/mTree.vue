@@ -7,7 +7,7 @@
              <i v-if="!isFolder" class="fa fa-file-text"></i> {{model.data.menuName}}
          </div>
          <ul v-show="open" v-if="isFolder">
-              <mTree v-for="cel in model.childTreeNode" :model="cel"></mTree>
+              <mTree v-for="cel in model.childTreeNode" :key="cel.id" :model="cel"></mTree>
          </ul>
      </li>
 </template>

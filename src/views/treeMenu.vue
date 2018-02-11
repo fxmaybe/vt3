@@ -3,7 +3,7 @@
            <div class="doc-center-slide">
               <div class="doc-center-tree" id="tree-slide">
                     <ul class="tree-menu">
-                        <m-tree :model="model" v-for="model in treeModel"></m-tree>
+                        <m-tree :model="model" :key="model.id" v-for="model in treeModel"></m-tree>
                     </ul>
               </div>
            </div>

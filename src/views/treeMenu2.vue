@@ -10,7 +10,7 @@
                       background-color="#32435f"
                       text-color="#ffffff"
                       active-text-color="#409efe">
-                        <m-tree :model="model" v-for="model in treeModel"></m-tree>
+                        <m-tree :model="model" :key="model.id" v-for="model in treeModel"></m-tree>
                     </el-menu>
               </div>
            </div>

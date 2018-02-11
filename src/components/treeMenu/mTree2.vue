@@ -1,11 +1,11 @@
  <template>
 
-      <el-submenu  v-if="isFolder" :index="model.id">
-        <template v-if="model.meta&&medal.meta.icon" slot="title">
+      <el-submenu v-if="isFolder" :index="model.id">
+        <template slot="title">
           <i class="el-icon-location"></i>
           <span>{{model.data.menuName}}</span>
         </template>
-        <m-tree v-for="cel in model.childTreeNode" :model="cel"></m-tree>
+        <m-tree v-for="cel in model.childTreeNode" :key="cel.id" :model="cel"></m-tree>
       </el-submenu>
       <el-menu-item v-else :index="model.id">{{model.data.menuName}}</el-menu-item> 
 </template>
