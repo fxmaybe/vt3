@@ -1,5 +1,4 @@
  <template>
-
       <el-submenu v-if="isFolder" :index="model.id">
         <template slot="title">
           <i class="el-icon-location"></i>
