@@ -24,27 +24,27 @@
                   },
                   "childTreeNode": [{
                       "data": {
-                          "menuName": "项目",
+                          "menuName": "项目1",
                           "menuCode": "",
                       },
                       "childTreeNode": [
                         {
                             "data": {
-                                "menuName": "项目细项",
+                                "menuName": "项目11",
                                 "menuCode": "",
                             },
                             "childTreeNode": [
                               {
                                   "data": {
-                                      "menuName": "项目1",
+                                      "menuName": "项目111",
                                       "menuCode": "BusProject1",
                                   },
                                   "childTreeNode": []
                               },
                               {
                                   "data": {
-                                      "menuName": "项目1",
-                                      "menuCode": "BusProject1",
+                                      "menuName": "项目2",
+                                      "menuCode": "BusProject2",
                                   },
                                   "childTreeNode": []
                               }

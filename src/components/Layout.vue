@@ -9,7 +9,7 @@
 </template>
 <script>
 import TopBar from "@/components/layout/TopBar.vue";
-import SideBar from "@/components/layout/SideBar.vue";
+import SideBar from "@/components/layout/SideBar/index.vue";
 import ScrollBar from "@/components/layout/ScrollBar.vue";
 import MainArea from "@/components/layout/MainArea.vue";
 export default {

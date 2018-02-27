@@ -1,15 +1,14 @@
 <template>
   <div class="content">
-    <router-view></router-view>
+    我是 ViewTest2
   </div>
 </template>
 <script>
 export default {
-  name: 'mainArea'
+  name: 'ViewTest2'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-	.content {padding-left: 200px;}
 </style>
