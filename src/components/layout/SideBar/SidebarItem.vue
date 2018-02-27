@@ -37,4 +37,7 @@
 </script>
 
 <style>
+  .el-menu-item.is-active {
+    background: rgb(40, 54, 76)!important;
+  }
 </style>
