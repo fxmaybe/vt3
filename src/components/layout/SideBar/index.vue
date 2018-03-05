@@ -4,17 +4,17 @@
       :default-active="$route.path"
       class="el-menu-vertical-left"
       @open="handleOpen"
+      :collapse="isCollapse"
       @close="handleClose"
-      background-color="#32435f"
-      text-color="#ffffff"
       :router="useRouter"
-      active-text-color="#409efe">
-        <sidebar-item :model="model" :key="model.meta.id" v-for="model in routes"></sidebar-item>
+      >
+      <sidebar-item :model="model" :key="model.meta.id" v-for="model in routes"></sidebar-item>
     </el-menu>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import SidebarItem from "./SidebarItem.vue";
 import RoutesConfig from '@/configs/routes-config';
 export default {
@@ -27,6 +27,14 @@ export default {
   },
   created(){
     console.log(this.useRouter);
+  },
+  computed: {
+    ...mapGetters([
+      'sidebar'
+    ]),
+    isCollapse() {
+      return !this.sidebar.opened
+    }
   },
   methods: {
     handleOpen(key, keyPath) {
@@ -47,7 +55,9 @@ export default {
   .side-bar {
     width: 200px;
   }
-  .el-menu {border: none;}
+  .el-menu {
+    border: none;
+  }
   .side-bar .el-menu-vertical-left {
     border: none;
   }
@@ -55,4 +65,7 @@ export default {
   .side-bar .el-submenu__title i, .side-bar .el-menu-item i {
     color: #ffffff;
   } 
+  .layout-small .side-bar {
+    width: 64px;
+  }
 </style>

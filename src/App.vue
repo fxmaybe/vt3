@@ -29,12 +29,16 @@ html, body {
 #app .scroll-container {
     -webkit-transition: width 0.28s;
     transition: width 0.28s;
-    width: 201px !important;
+    width: 200px;
     height: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     z-index: 1001;
+}
+
+ #app .layout-small .scroll-container {
+  width: 64px;
 }
 </style>

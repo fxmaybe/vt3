@@ -1,7 +1,7 @@
 <template>
   <el-row class="top-bar">
     <el-col :span="24">
-      <div class="head-wrap"><router-link to="/" class="logo"><i class="el-icon-setting"></i> Vue-Admin-Base</router-link></div>
+      <div class="head-wrap"><router-link to="/" class="logo"><i class="el-icon-setting"></i> 后台管理系统<!-- Vue-Admin-Base --></router-link></div>
     </el-col>
   </el-row>
 </template>

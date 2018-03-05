@@ -9,6 +9,15 @@ module.exports = [
     }
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Login.vue'),
+    meta: {
+      icon: "news",
+      id: 5
+    }
+  },
+  {
     path: '/demoMenu',
     name: 'DemoMenu',
     component: () => import('@/views/treeMenu/index.vue'),
@@ -65,11 +74,11 @@ module.exports = [
     ]
   },
   {
-    path: '/viewTest1',
-    name: 'ViewTest1',
+    path: '/viewTestX1',
+    name: 'ViewTestX1',
     component: () => import('@/views/viewTest/ViewTest1.vue'),
     meta: {
-      icon: "star-off",
+      icon: "message",
       id: 4
     }
   }

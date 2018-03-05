@@ -1,5 +1,5 @@
 <template>
-  <div class="main-layout">
+  <div class="main-layout" :class="{'layout-small': isCollapse}">
     <top-bar />
     <scroll-bar>
       <side-bar class="sidebar-container"></side-bar>
@@ -8,6 +8,7 @@
   </div>
 </template>
 <script>
+import {mapGetters} from "vuex";
 import TopBar from "@/components/layout/TopBar.vue";
 import SideBar from "@/components/layout/SideBar/index.vue";
 import ScrollBar from "@/components/layout/ScrollBar.vue";
@@ -16,6 +17,14 @@ export default {
   name: 'MainLayout',
   data () {
     return {
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'sidebar'
+    ]),
+    isCollapse() {
+      return !this.sidebar.opened
     }
   },
   components: {

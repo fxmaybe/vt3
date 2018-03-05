@@ -1,5 +1,6 @@
 <template>
   <div class="scroll-container" ref="scrollContainer" @wheel.prevent="handleScroll" >
+    <div class="expend-tool" @click="toggleSideBar"><i class="icon iconfont icon-caidan"></i></div>
     <div class="scroll-wrapper" ref="scrollWrapper" :style="{top: top + 'px'}">
       <slot></slot>
     </div>
@@ -15,6 +16,8 @@ export default {
     return {
       top: 0
     }
+  },
+  computed: {
   },
   methods: {
     handleScroll(e) {
@@ -36,6 +39,9 @@ export default {
           this.top = 0
         }
       }
+    },
+    toggleSideBar() {
+      this.$store.dispatch('toggleSidebarAct')
     }
   }
 }
@@ -47,12 +53,36 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #32435f;
+  /*background-color: #32435f;*/
+  border-right: 1px solid #e5e5e5;
   
 }
+
 .scroll-wrapper {
   position: absolute;
   width: 100%!important;
   padding-top: 60px;
+}
+
+.scroll-container .expend-tool {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  position: absolute;
+  top: 60px;
+  right: -37px;
+  text-align: center;
+}
+.scroll-container .expend-tool .icon {
+  font-size: 22px; 
+  color: #909399;
+  cursor: pointer;
+}
+.scroll-container .expend-tool:hover {
+  background: #ecf5ff;
+  border-radius: 0 0 4px 0;
+}
+.scroll-container .expend-tool:hover .icon {
+  color: #409eff;
 }
 </style>

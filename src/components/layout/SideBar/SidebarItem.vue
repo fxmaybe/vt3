@@ -8,7 +8,7 @@
       </el-submenu>     
       <el-menu-item v-else :index="model.path">
           <i v-if="model.meta.icon" :class="[iconClass(model.meta.icon)]"></i>
-          <span>{{model.name}}</span>
+          <span slot="title">{{model.name}}</span>
       </el-menu-item> 
 </template>
 
@@ -38,6 +38,13 @@
 
 <style>
   .el-menu-item.is-active {
-    background: rgb(40, 54, 76)!important;
+    /*background: rgb(40, 54, 76)!important;*/
+    background: #ecf5ff;
+  }
+  .el-submenu.is-active .el-submenu__title{
+    background: #ecf5ff;
+  }
+  .el-submenu.is-active.is-opened .el-submenu__title{
+    background: none;
   }
 </style>
