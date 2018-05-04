@@ -10,7 +10,7 @@
         </el-form-item>
         <el-checkbox v-model="checked" checked class="remember">记住密码</el-checkbox>
         <el-form-item style="width:100%;">
-            <el-button type="primary" style="width:100%;" @click="handleSubmit2" :loading="logining">登录</el-button>
+            <el-button type="primary" style="width:100%;" @click="handleSubmit" :loading="logining">登录</el-button>
         </el-form-item>
     </el-form>
 </div>
@@ -48,7 +48,7 @@ export default {
         };
     },
     methods: {
-        handleSubmit2(ev) {
+        handleSubmit(ev) {
             var _this = this;
             _this.$refs.ruleForm2.validate((valid) => {
                 if (valid) {
@@ -88,7 +88,7 @@ export default {
     padding: 35px 35px 15px;
     background: #fff;
     border: 1px solid #eaeaea;
-    box-shadow: 0 0 25px #cac6c6;
+    box-shadow: 0 0 6px 0 #cac6c6;
 }
 
 label.el-checkbox.remember {

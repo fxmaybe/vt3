@@ -37,6 +37,9 @@
 </script>
 
 <style>
+  .el-menu-item:focus, .el-menu-item:hover {
+    background: #f3f8ff;  
+  }
   .el-menu-item.is-active {
     /*background: rgb(40, 54, 76)!important;*/
     background: #ecf5ff;
@@ -44,7 +47,19 @@
   .el-submenu.is-active .el-submenu__title{
     background: #ecf5ff;
   }
+  .el-submenu.is-active .el-submenu__title, .el-submenu.is-active .el-submenu__title i {
+    color: #409eff;  
+  }
   .el-submenu.is-active.is-opened .el-submenu__title{
     background: none;
+    color: #303133;
+  }
+  .el-submenu.is-active.is-opened .el-submenu__title i { 
+    color: #909399;
+  }
+ .el-submenu__title:hover, .el-submenu.is-active.is-opened .el-submenu__title:hover {background: #f4f9ff;  }
+
+  .el-menu--popup {
+    padding: 0;
   }
 </style>

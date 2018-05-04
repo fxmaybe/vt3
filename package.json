@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "cookie-js": "file:node_modules/cookie-js",
     "element-ui": "^2.1.0",
     "js-cookie": "^2.2.0",
     "normalize.css": "^7.0.0",
