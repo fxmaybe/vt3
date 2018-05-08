@@ -57,7 +57,9 @@
   .el-submenu.is-active.is-opened .el-submenu__title i { 
     color: #909399;
   }
- .el-submenu__title:hover, .el-submenu.is-active.is-opened .el-submenu__title:hover {background: #f4f9ff;  }
+ .el-submenu__title:hover, .el-submenu.is-active.is-opened .el-submenu__title:hover {
+    background: #f4f9ff;  
+  }
 
   .el-menu--popup {
     padding: 0;
