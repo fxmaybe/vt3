@@ -6,6 +6,7 @@
 	{{count}}
     <count-test @change="countChange"></count-test>
     <count-test @change="countChange"></count-test>
+    <count-test @change="countChange"></count-test>
   </div>
 </template>
 <script>

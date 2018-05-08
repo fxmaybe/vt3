@@ -36,6 +36,7 @@ html, body {
     bottom: 0;
     left: 0;
     z-index: 1001;
+    background: #fff;
 }
 
  #app .layout-small .scroll-container {

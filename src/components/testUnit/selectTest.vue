@@ -1,23 +1,26 @@
 <template>
   <div class="select-content">
-    <div class="select-input gray center" @click="toggle" @selectstart="cancelSelectStart">{{triggerTxt}}</div>
-    <div class="black select" :class="{selected: selected}"> 
-      <div class="dark-grey center">
-        <span class="yellow">行内元素</span>
-      </div>
-      <div class="dark-grey">
-        <div class="gray center">
-            <span class="yellow">行内元素</span>
+    <div class="select-input grey center" @click.stop="toggle" onselectstart="return false;">{{triggerTxt}}</div>
+    <transition enter-active-class="fadeIn" leave-active-class="fadeOut">
+      <div class="black select" v-show="selected" @click.stop>
+        <div class="dark-grey center" @click.stop="getSelectVal">
+          <span class="yellow">行内元素</span>
+        </div>
+        <div class="dark-grey">
+          <div class="grey center">
+              <span class="yellow">行内元素</span>
+          </div>
+        </div>
+        <div class="dark-grey">
+          <div class="grey">
+            <div class="light-grey center"><span class="yellow">行内元素</span></div>
+          </div>
         </div>
       </div>
-      <div class="dark-grey">
-        <div class="gray">
-          <div class="light-gray center"><span class="yellow">行内元素</span></div>
-        </div>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
+
 <script>
 export default {
   name: 'selectTest',
@@ -27,22 +30,33 @@ export default {
       
     }
   },
+  mounted() {
+    let that  = this;
+    document.body.addEventListener("click", function () {
+      that.selected = false;
+    }, false);
+  },
   methods: {
-    toggle(){
+    toggle() {
       this.selected = !this.selected;
     },
-    open(){
+    open() {
       this.selected = true;
     },
-    close(){
+    close() {
       this.selected = false;
     },
-    cancelSelectStart(){
+    getSelectVal(e) {
+      let that = this;
+
+      that.close();
+    },
+    cancelSelectStart() {
       return false;
     }
   },
   computed: {
-    triggerTxt(){
+    triggerTxt() {
       return this.selected ? "点击收起" : "点击展开";
     }
   }
@@ -50,17 +64,47 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-  * {margin: 0; padding: 0;}
-  .select-input {cursor: pointer;}
-  .select-input, .select {width: 300px;padding: 10px; margin-top: 10px;}
-  .select {display: none;}
-  .selected {display: block;}
-  .select div {padding: 10px; margin: 10px;}
-  .black {background: #333;}
-  .dark-grey {background: #666;}
-  .gray {background: #999;}
-  .light-gray {background: #aaa;}
-  .yellow {background: yellow;}
-  .center { text-align: center;}
+<style scoped>
+  .red {
+    background: red;
+  }
+  .select-input {
+    cursor: pointer;
+  }
+  .select-input, .select {
+    width: 300px;
+    padding: 10px; 
+    margin-top: 10px;
+  }
+  .select {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .selected {
+    display: block;
+  }
+  .select div {
+    padding: 10px; 
+    margin: 10px;
+  }
+  .black {
+    background: #333;
+  }
+  .dark-grey {
+    background: #666;
+  }
+  .grey {
+    background: #999;
+  }
+  .light-grey {
+    background: #aaa;
+  }
+  .yellow {
+    background: yellow;
+  }
+  .center { 
+    text-align: center;
+  }
 </style>

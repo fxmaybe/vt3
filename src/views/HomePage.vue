@@ -12,7 +12,6 @@
       <label :for="'demo'+index" v-text="option"></label>
     </div>
     {{postOptions}}
-    git test
     <br />
     <br />
   </div>

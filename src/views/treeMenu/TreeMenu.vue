@@ -117,3 +117,6 @@
         }
     }
 </script>
+<style>
+.doc-center-wrap {margin-left: 20px; margin-top: 20px;}
+</style>
